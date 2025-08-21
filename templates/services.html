@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 py-20">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+    <h2 class="text-4xl font-extrabold text-gray-900 dark:text-white mb-6">My Services</h2>
+    <p class="text-lg text-gray-600 dark:text-gray-300 mb-12">
+      Here are the professional services I offer to help you build 
+      <span class="text-indigo-600 dark:text-indigo-400 font-semibold">modern, scalable</span> 
+      and <span class="text-indigo-600 dark:text-indigo-400 font-semibold">beautiful</span> digital solutions.
+    </p>
+
+    <!-- Services Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+      <!-- Service Card 1 -->
+      <div class="bg-white dark:bg-gray-700 rounded-2xl shadow-lg hover:shadow-2xl transition p-8 text-center">
+        <div class="flex items-center justify-center w-16 h-16 mx-auto mb-6 bg-indigo-100 dark:bg-indigo-800 text-indigo-600 dark:text-indigo-300 rounded-full">
+          <i class="fas fa-code text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Web Development</h3>
+        <p class="text-gray-600 dark:text-gray-300 text-sm">
+          Full-stack web development using <strong>MERN Stack</strong> & <strong>Django</strong> to build modern and scalable apps.
+        </p>
+      </div>
+
+      <!-- Service Card 2 -->
+      <div class="bg-white dark:bg-gray-700 rounded-2xl shadow-lg hover:shadow-2xl transition p-8 text-center">
+        <div class="flex items-center justify-center w-16 h-16 mx-auto mb-6 bg-indigo-100 dark:bg-indigo-800 text-indigo-600 dark:text-indigo-300 rounded-full">
+          <i class="fas fa-paint-brush text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">UI/UX Design</h3>
+        <p class="text-gray-600 dark:text-gray-300 text-sm">
+          Designing clean, user-friendly, and modern interfaces with a focus on responsive & intuitive experiences.
+        </p>
+      </div>
+
+      <!-- Service Card 3 -->
+      <div class="bg-white dark:bg-gray-700 rounded-2xl shadow-lg hover:shadow-2xl transition p-8 text-center">
+        <div class="flex items-center justify-center w-16 h-16 mx-auto mb-6 bg-indigo-100 dark:bg-indigo-800 text-indigo-600 dark:text-indigo-300 rounded-full">
+          <i class="fas fa-robot text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">AI & Chatbots</h3>
+        <p class="text-gray-600 dark:text-gray-300 text-sm">
+          Building intelligent chatbots & AI-powered tools using Python & NLP libraries.
+        </p>
+      </div>
+
+      <!-- Service Card 4 -->
+      <div class="bg-white dark:bg-gray-700 rounded-2xl shadow-lg hover:shadow-2xl transition p-8 text-center">
+        <div class="flex items-center justify-center w-16 h-16 mx-auto mb-6 bg-indigo-100 dark:bg-indigo-800 text-indigo-600 dark:text-indigo-300 rounded-full">
+          <i class="fas fa-mobile-alt text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Responsive Design</h3>
+        <p class="text-gray-600 dark:text-gray-300 text-sm">
+          Fully responsive and mobile-friendly designs that look great on every device.
+        </p>
+      </div>
+
+      <!-- Service Card 5 -->
+      <div class="bg-white dark:bg-gray-700 rounded-2xl shadow-lg hover:shadow-2xl transition p-8 text-center">
+        <div class="flex items-center justify-center w-16 h-16 mx-auto mb-6 bg-indigo-100 dark:bg-indigo-800 text-indigo-600 dark:text-indigo-300 rounded-full">
+          <i class="fas fa-cloud text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Deployment & Hosting</h3>
+        <p class="text-gray-600 dark:text-gray-300 text-sm">
+          Deploying and hosting web apps on cloud platforms with performance & security optimization.
+        </p>
+      </div>
+
+      <!-- Service Card 6 -->
+      <div class="bg-white dark:bg-gray-700 rounded-2xl shadow-lg hover:shadow-2xl transition p-8 text-center">
+        <div class="flex items-center justify-center w-16 h-16 mx-auto mb-6 bg-indigo-100 dark:bg-indigo-800 text-indigo-600 dark:text-indigo-300 rounded-full">
+          <i class="fas fa-database text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Database Management</h3>
+        <p class="text-gray-600 dark:text-gray-300 text-sm">
+          Designing, managing, and optimizing databases for high-performance applications.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+{% endblock content %}

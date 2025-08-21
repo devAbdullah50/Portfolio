@@ -3,11 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdullah Portfolio</title>
+    <title>{% block title %}Abdullah Portfolio{% endblock title %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
-<body>
-    {% block content %}
-    
-    {% endblock content %}
+<body class="bg-gray-900 text-gray-100 font-sans">
+
+    <!-- 🌟 Navbar -->
+    <nav class="bg-gray-800/80 backdrop-blur-md fixed top-0 left-0 w-full shadow-lg z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold text-indigo-400 hover:text-indigo-300 transition">Abdullah</a>
+            
+            <ul class="hidden md:flex space-x-8 text-lg">
+                <li><a href="/" class="hover:text-indigo-400 transition">Home</a></li>
+                <li><a href="/about" class="hover:text-indigo-400 transition">About</a></li>
+                <li><a href="/projects" class="hover:text-indigo-400 transition">Projects</a></li>
+                <li><a href="/services" class="hover:text-indigo-400 transition">Services</a></li>
+                <li><a href="/contact" class="hover:text-indigo-400 transition">Contact</a></li>
+            </ul>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-2xl focus:outline-none">
+                ☰
+            </button>
+        </div>
+
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden flex-col md:hidden bg-gray-800 px-6 pb-4 space-y-2">
+            <a href="/" class="block hover:text-indigo-400 transition">Home</a>
+            <a href="/about" class="block hover:text-indigo-400 transition">About</a>
+            <a href="/projects" class="block hover:text-indigo-400 transition">Projects</a>
+            <a href="/services" class="block hover:text-indigo-400 transition">Services</a>
+            <a href="/contact" class="block hover:text-indigo-400 transition">Contact</a>
+        </div>
+    </nav>
+
+    <!-- 🌟 Main Content -->
+    <main class="pt-24 container mx-auto px-6">
+        {% block content %}
+        {% endblock content %}
+    </main>
+
+    <!-- 🌟 Footer -->
+    <footer class="bg-gray-800 mt-16 py-6 text-center text-gray-400 text-sm">
+        <p>© {{ now|date:"Y" }} Abdullah Portfolio. All rights reserved.</p>
+    </footer>
+
+    <!-- Mobile menu toggle -->
+    <script>
+        const btn = document.getElementById("menu-btn");
+        const menu = document.getElementById("mobile-menu");
+        btn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+        });
+    </script>
+
 </body>
 </html>
