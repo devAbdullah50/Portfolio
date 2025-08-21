@@ -1,8 +1,8 @@
 {
+  "builds": [
+    { "src": "portfolio/asgi.py", "use": "@vercel/python" }
+  ],
   "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "portfolio/wsgi.py"
-    }
+    { "src": "/(.*)", "dest": "portfolio/asgi.py" }
   ]
 }
