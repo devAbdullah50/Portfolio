@@ -4,84 +4,77 @@
 
 {% block content %}
 <section class="relative py-20 bg-gradient-to-br from-blue-600 via-indigo-700 to-purple-800 text-white">
-  <div class="container mx-auto px-6 lg:px-20">
-    <div class="text-center mb-12">
-      <h2 class="text-4xl font-bold mb-4">Get in Touch</h2>
-      <p class="text-lg text-gray-200">Have a question, project, or just want to say hello?  
-      Fill out the form below and I’ll get back to you as soon as possible.</p>
-    </div>
-
-    <div class="grid md:grid-cols-2 gap-10">
-      <!-- Contact Form -->
-      <div class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 rounded-2xl shadow-xl p-8">
-        <form action="#" method="POST" class="space-y-6">
-          <div>
-            <label for="name" class="block font-semibold">Full Name</label>
-            <input type="text" id="name" name="name" required
-              class="w-full p-3 rounded-xl border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
-          </div>
-
-          <div>
-            <label for="email" class="block font-semibold">Email</label>
-            <input type="email" id="email" name="email" required
-              class="w-full p-3 rounded-xl border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
-          </div>
-
-          <div>
-            <label for="message" class="block font-semibold">Message</label>
-            <textarea id="message" name="message" rows="5" required
-              class="w-full p-3 rounded-xl border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-          </div>
-
-          <button type="submit"
-            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-xl transition-all duration-300">
-            Send Message
-          </button>
-        </form>
-      </div>
-
-      <!-- Contact Info -->
-      <div class="flex flex-col justify-center space-y-8">
-        <div class="flex items-center space-x-4">
-          <div class="p-4 bg-white/10 rounded-full">
-            <i class="fas fa-map-marker-alt text-2xl"></i>
-          </div>
-          <div>
-            <h4 class="text-xl font-semibold">Address</h4>
-            <p>Islamabad, Pakistan</p>
-          </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <!-- Contact Form -->
+        <div class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 rounded-2xl shadow-xl p-6 sm:p-8">
+          <form action="#" method="POST" class="space-y-6">
+            <div>
+              <label for="name" class="block font-semibold">Full Name</label>
+              <input type="text" id="name" name="name" required
+                class="w-full p-3 rounded-xl border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+      
+            <div>
+              <label for="email" class="block font-semibold">Email</label>
+              <input type="email" id="email" name="email" required
+                class="w-full p-3 rounded-xl border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+      
+            <div>
+              <label for="message" class="block font-semibold">Message</label>
+              <textarea id="message" name="message" rows="5" required
+                class="w-full p-3 rounded-xl border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+            </div>
+      
+            <button type="submit"
+              class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-xl transition-all duration-300">
+              Send Message
+            </button>
+          </form>
         </div>
-
-        <div class="flex items-center space-x-4">
-          <div class="p-4 bg-white/10 rounded-full">
-            <i class="fas fa-envelope text-2xl"></i>
+      
+        <!-- Contact Info -->
+        <div class="flex flex-col justify-center space-y-8 text-center sm:text-left">
+          <div class="flex flex-col sm:flex-row sm:items-center sm:space-x-4 space-y-2 sm:space-y-0">
+            <div class="p-4 bg-white/10 rounded-full mx-auto sm:mx-0">
+              <i class="fas fa-map-marker-alt text-2xl"></i>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold">Address</h4>
+              <p>Islamabad, Pakistan</p>
+            </div>
           </div>
-          <div>
-            <h4 class="text-xl font-semibold">Email</h4>
-            <p>abdullah@example.com</p>
+      
+          <div class="flex flex-col sm:flex-row sm:items-center sm:space-x-4 space-y-2 sm:space-y-0">
+            <div class="p-4 bg-white/10 rounded-full mx-auto sm:mx-0">
+              <i class="fas fa-envelope text-2xl"></i>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold">Email</h4>
+              <p>abdullah@example.com</p>
+            </div>
           </div>
-        </div>
-
-        <div class="flex items-center space-x-4">
-          <div class="p-4 bg-white/10 rounded-full">
-            <i class="fas fa-phone-alt text-2xl"></i>
+      
+          <div class="flex flex-col sm:flex-row sm:items-center sm:space-x-4 space-y-2 sm:space-y-0">
+            <div class="p-4 bg-white/10 rounded-full mx-auto sm:mx-0">
+              <i class="fas fa-phone-alt text-2xl"></i>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold">Phone</h4>
+              <p>+92 300 1234567</p>
+            </div>
           </div>
-          <div>
-            <h4 class="text-xl font-semibold">Phone</h4>
-            <p>+92 300 1234567</p>
+      
+          <!-- Social Icons -->
+          <div class="flex justify-center sm:justify-start space-x-6 mt-6">
+            <a href="#" class="text-white hover:text-blue-400 text-2xl"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="text-white hover:text-sky-400 text-2xl"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-white hover:text-pink-500 text-2xl"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-white hover:text-gray-300 text-2xl"><i class="fab fa-github"></i></a>
+            <a href="#" class="text-white hover:text-blue-500 text-2xl"><i class="fab fa-linkedin"></i></a>
           </div>
-        </div>
-
-        <!-- Social Icons -->
-        <div class="flex space-x-6 mt-6">
-          <a href="#" class="text-white hover:text-blue-400 text-2xl"><i class="fab fa-facebook"></i></a>
-          <a href="#" class="text-white hover:text-sky-400 text-2xl"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="text-white hover:text-pink-500 text-2xl"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="text-white hover:text-gray-300 text-2xl"><i class="fab fa-github"></i></a>
-          <a href="#" class="text-white hover:text-blue-500 text-2xl"><i class="fab fa-linkedin"></i></a>
         </div>
       </div>
-    </div>
-  </div>
+      
 </section>
 {% endblock content %}

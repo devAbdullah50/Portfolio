@@ -5,20 +5,20 @@
 {% block content %}
 
 <!-- 🌟 Hero Section -->
-<section class="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black flex flex-col md:flex-row items-center justify-center gap-16 px-6 md:px-20 text-center md:text-left">
+<section class="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black flex flex-col md:flex-row items-center justify-center gap-12 px-6 sm:px-10 md:px-20 text-center md:text-left">
     
     <!-- Left Content -->
     <div class="flex-1 space-y-6 animate-fadeInUp">
-        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+        <h1 class="text-3xl sm:text-4xl md:text-6xl font-extrabold leading-tight">
             Hi, I'm <span class="text-indigo-400">Abdullah</span> 👋
         </h1>
-        <p class="text-lg md:text-xl text-gray-300 max-w-lg">
+        <p class="text-base sm:text-lg md:text-xl text-gray-300 max-w-lg mx-auto md:mx-0">
             A passionate <span class="text-indigo-300">MERN Stack Developer</span> 
             & future <span class="text-indigo-300">AI Engineer</span> 🚀
         </p>
         
         <!-- Buttons -->
-        <div class="space-x-4 mt-6">
+        <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 mt-6 justify-center md:justify-start">
             <a href="/projects" class="px-6 py-3 bg-indigo-500 hover:bg-indigo-600 rounded-lg shadow-lg transition transform hover:scale-105">
                 View Projects
             </a>
@@ -30,67 +30,64 @@
 
     <!-- Right Profile Image -->
     <div class="flex-1 flex justify-center">
-        <div class="w-72 h-72 rounded-full overflow-hidden border-4 border-indigo-500 shadow-[0_0_40px_rgba(99,102,241,0.6)]">
-            <img src="https://via.placeholder.com/400" alt="Profile" class="w-full h-full object-cover">
+        <div class="w-48 h-48 sm:w-60 sm:h-60 md:w-72 md:h-72 rounded-full overflow-hidden border-4 border-indigo-500 shadow-[0_0_40px_rgba(99,102,241,0.6)]">
+            <img src="https://i.postimg.cc/bNhGnY46/IMG-20250720-WA0220-1.jpg" alt="Profile" class="w-full h-full object-cover">
         </div>
     </div>
 </section>
 
 <!-- 🌟 Skills Section -->
-<section class="py-20 px-6 md:px-20 bg-gray-950">
-    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">⚡ My Skills</h2>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-        <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transition">
-            <h3 class="text-xl font-semibold">HTML</h3>
-        </div>
-        <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transition">
-            <h3 class="text-xl font-semibold">CSS / Tailwind</h3>
-        </div>
-        <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transition">
-            <h3 class="text-xl font-semibold">JavaScript</h3>
-        </div>
-        <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transition">
-            <h3 class="text-xl font-semibold">React.js</h3>
-        </div>
-        <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transition">
-            <h3 class="text-xl font-semibold">Node.js</h3>
-        </div>
-        <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transition">
-            <h3 class="text-xl font-semibold">Express</h3>
-        </div>
-        <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transition">
-            <h3 class="text-xl font-semibold">MongoDB</h3>
-        </div>
-        <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transition">
-            <h3 class="text-xl font-semibold">Python</h3>
-        </div>
+<section class="py-16 sm:py-20 px-6 md:px-20 bg-gray-950">
+    <div class="py-12 bg-gray-900 text-white rounded-2xl shadow-lg">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-12">⚡ My Skills</h2>
+  
+        <!-- Responsive Skills Grid with Logos -->
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6 md:gap-8">
+    {% for skill in skills %}
+      <div class="bg-gray-800 p-4 sm:p-6 rounded-xl shadow-md hover:shadow-xl hover:scale-105 transition duration-300 flex flex-col items-center text-center">
+        
+        <!-- Skill Logo -->
+        <img src="{{ skill.logo }}" alt="{{ skill.name }} Logo" class="w-12 h-12 mb-3 sm:w-14 sm:h-14 object-contain">
+        
+        <!-- Skill Name -->
+        <h3 class="text-sm sm:text-base md:text-lg font-semibold tracking-wide">
+          {{ skill.name }}
+        </h3>
+      </div>
+    {% endfor %}
+  </div>
+  
+  
+      </div>
     </div>
-</section>
-
+  </section>
+  
 <!-- 🌟 Projects Preview -->
-<section class="py-20 px-6 md:px-20 bg-gray-900">
-    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">🚀 Featured Projects</h2>
-    <div class="grid md:grid-cols-3 gap-10">
+<section class="py-16 sm:py-20 px-6 md:px-20 bg-gray-900">
+    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-12">🚀 Featured Projects</h2>
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-10">
         <div class="bg-gray-800 rounded-xl shadow-lg p-6 hover:scale-105 transition">
-            <h3 class="text-xl font-semibold mb-2">Portfolio Website</h3>
+            <h3 class="text-lg sm:text-xl font-semibold mb-2">Portfolio Website</h3>
             <p class="text-gray-400">A modern portfolio built with Django & TailwindCSS.</p>
         </div>
         <div class="bg-gray-800 rounded-xl shadow-lg p-6 hover:scale-105 transition">
-            <h3 class="text-xl font-semibold mb-2">Blog App</h3>
+            <h3 class="text-lg sm:text-xl font-semibold mb-2">Blog App</h3>
             <p class="text-gray-400">A full-featured blog platform with authentication.</p>
         </div>
         <div class="bg-gray-800 rounded-xl shadow-lg p-6 hover:scale-105 transition">
-            <h3 class="text-xl font-semibold mb-2">E-commerce Store</h3>
+            <h3 class="text-lg sm:text-xl font-semibold mb-2">E-commerce Store</h3>
             <p class="text-gray-400">Online store with cart, checkout & payment integration.</p>
         </div>
     </div>
 </section>
 
 <!-- 🌟 Contact CTA -->
-<section class="py-20 px-6 md:px-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-center text-white">
-    <h2 class="text-3xl md:text-4xl font-bold mb-6">📩 Let's Work Together</h2>
-    <p class="mb-8 text-lg">Got a project idea or want to collaborate? Reach out to me!</p>
-    <a href="/contact" class="px-8 py-4 bg-white text-gray-900 rounded-lg shadow-lg font-semibold hover:scale-105 transition">
+<section class="py-16 sm:py-20 px-6 md:px-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-center text-white">
+    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">📩 Let's Work Together</h2>
+    <p class="mb-8 text-base sm:text-lg">Got a project idea or want to collaborate? Reach out to me!</p>
+    <a href="/contact" class="px-6 sm:px-8 py-3 sm:py-4 bg-white text-gray-900 rounded-lg shadow-lg font-semibold hover:scale-105 transition">
         Contact Me
     </a>
 </section>
