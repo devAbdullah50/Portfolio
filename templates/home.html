@@ -6,7 +6,6 @@
 
 <!-- 🌟 Hero Section -->
 <section class="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black flex flex-col md:flex-row items-center justify-center gap-12 px-6 sm:px-10 md:px-20 text-center md:text-left">
-    
     <!-- Left Content -->
     <div class="flex-1 space-y-6 animate-fadeInUp">
         <h1 class="text-3xl sm:text-4xl md:text-6xl font-extrabold leading-tight">
@@ -16,7 +15,6 @@
             A passionate <span class="text-indigo-300">MERN Stack Developer</span> 
             & future <span class="text-indigo-300">AI Engineer</span> 🚀
         </p>
-        
         <!-- Buttons -->
         <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 mt-6 justify-center md:justify-start">
             <a href="/projects" class="px-6 py-3 bg-indigo-500 hover:bg-indigo-600 rounded-lg shadow-lg transition transform hover:scale-105">
@@ -36,34 +34,46 @@
     </div>
 </section>
 
+
+<!-- 🌟 About Me Section -->
+<section class="py-16 sm:py-20 px-6 md:px-20 bg-gray-950 text-gray-300">
+  <div class="max-w-5xl mx-auto text-center space-y-8">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white">👨‍💻 About Me</h2>
+      <p class="text-base sm:text-lg leading-relaxed">
+          I'm Abdullah, a dedicated <span class="text-indigo-400">Computer Science student</span> and a 
+          self-taught <span class="text-indigo-400">MERN Stack Developer</span>.  
+          I love creating modern, scalable, and visually appealing web apps.  
+          Currently, I’m exploring <span class="text-purple-400">Artificial Intelligence</span> and dream of building 
+          next-gen solutions that can impact millions of lives.
+      </p>
+      <div class="flex justify-center gap-6">
+          <a href="/resume.pdf" class="px-6 py-3 bg-indigo-500 hover:bg-indigo-600 rounded-lg shadow-lg transition hover:scale-105">
+              📄 Download Resume
+          </a>
+      </div>
+  </div>
+</section>
+
+
 <!-- 🌟 Skills Section -->
 <section class="py-16 sm:py-20 px-6 md:px-20 bg-gray-950">
     <div class="py-12 bg-gray-900 text-white rounded-2xl shadow-lg">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        
         <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-12">⚡ My Skills</h2>
-  
-        <!-- Responsive Skills Grid with Logos -->
-<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6 md:gap-8">
-    {% for skill in skills %}
-      <div class="bg-gray-800 p-4 sm:p-6 rounded-xl shadow-md hover:shadow-xl hover:scale-105 transition duration-300 flex flex-col items-center text-center">
-        
-        <!-- Skill Logo -->
-        <img src="{{ skill.logo }}" alt="{{ skill.name }} Logo" class="w-12 h-12 mb-3 sm:w-14 sm:h-14 object-contain">
-        
-        <!-- Skill Name -->
-        <h3 class="text-sm sm:text-base md:text-lg font-semibold tracking-wide">
-          {{ skill.name }}
-        </h3>
-      </div>
-    {% endfor %}
-  </div>
-  
-  
+        <!-- Responsive Skills Grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6 md:gap-8">
+            {% for skill in skills %}
+              <div class="bg-gray-800 p-4 sm:p-6 rounded-xl shadow-md hover:shadow-xl hover:scale-105 transition duration-300 flex flex-col items-center text-center">
+                <img src="{{ skill.logo }}" alt="{{ skill.name }} Logo" class="w-12 h-12 mb-3 sm:w-14 sm:h-14 object-contain">
+                <h3 class="text-sm sm:text-base md:text-lg font-semibold tracking-wide">{{ skill.name }}</h3>
+              </div>
+            {% endfor %}
+        </div>
       </div>
     </div>
-  </section>
-  
+</section>
+
+
 <!-- 🌟 Projects Preview -->
 <section class="py-16 sm:py-20 px-6 md:px-20 bg-gray-900">
     <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-12">🚀 Featured Projects</h2>
@@ -82,6 +92,83 @@
         </div>
     </div>
 </section>
+
+
+<!-- 🌟 Testimonials / Achievements -->
+<section class="py-16 sm:py-20 px-6 md:px-20 bg-gray-950 text-gray-200">
+  <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-12">🌟 Testimonials & Achievements</h2>
+  <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-gray-800 p-6 rounded-xl shadow-md hover:scale-105 transition">
+          <p class="italic">"Abdullah is a talented developer who brings ideas to life with clean code and modern design!"</p>
+          <h4 class="mt-4 font-semibold text-indigo-400">– Client A</h4>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow-md hover:scale-105 transition">
+          <p class="italic">"His MERN stack projects are not only functional but also optimized for performance."</p>
+          <h4 class="mt-4 font-semibold text-indigo-400">– Mentor</h4>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow-md hover:scale-105 transition">
+          <p class="italic">🏆 Hackathon Finalist 2024 – Built an AI-powered project that impressed judges.</p>
+          <h4 class="mt-4 font-semibold text-indigo-400">– Achievement</h4>
+      </div>
+  </div>
+</section>
+
+<!-- 🌟 Timeline Section -->
+<section class="py-16 sm:py-20 px-6 md:px-20 bg-gray-900 text-gray-200">
+  <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-12">🕒 My Journey</h2>
+  
+  <div class="max-w-4xl mx-auto relative">
+    <!-- Vertical Line -->
+    <div class="absolute left-1/2 transform -translate-x-1/2 h-full border-l-2 border-indigo-500"></div>
+
+    <!-- Timeline Items -->
+    <div class="space-y-12">
+      
+      <!-- Item 1 -->
+      <div class="relative flex items-center w-full">
+        <div class="w-1/2 pr-8 text-right hidden sm:block">
+          <h3 class="text-lg font-semibold text-indigo-400">2022</h3>
+          <p class="text-gray-300">Started my journey in <span class="font-semibold">Web Development</span> by learning HTML, CSS & JavaScript basics.</p>
+        </div>
+        <div class="w-8 h-8 bg-indigo-500 rounded-full shadow-lg absolute left-1/2 transform -translate-x-1/2"></div>
+        <div class="w-1/2 pl-8 sm:hidden text-left">
+          <h3 class="text-lg font-semibold text-indigo-400">2022</h3>
+          <p class="text-gray-300">Started my journey in <span class="font-semibold">Web Development</span> by learning HTML, CSS & JavaScript basics.</p>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="relative flex items-center w-full">
+        <div class="w-1/2 pr-8 text-right">
+          <h3 class="text-lg font-semibold text-indigo-400">2023</h3>
+          <p class="text-gray-300">Dived into <span class="font-semibold">MERN Stack</span> — MongoDB, Express, React, Node.js. Built my first full-stack apps.</p>
+        </div>
+        <div class="w-8 h-8 bg-indigo-500 rounded-full shadow-lg absolute left-1/2 transform -translate-x-1/2"></div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="relative flex items-center w-full">
+        <div class="w-1/2 pl-8 text-left">
+          <h3 class="text-lg font-semibold text-indigo-400">2024</h3>
+          <p class="text-gray-300">Exploring <span class="font-semibold">AI & Machine Learning</span>, combining web dev with intelligent systems 🚀.</p>
+        </div>
+        <div class="w-8 h-8 bg-indigo-500 rounded-full shadow-lg absolute left-1/2 transform -translate-x-1/2"></div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="relative flex items-center w-full">
+        <div class="w-1/2 pr-8 text-right">
+          <h3 class="text-lg font-semibold text-indigo-400">Future</h3>
+          <p class="text-gray-300">Aiming to become a <span class="font-semibold">Professional AI Engineer</span> & build impactful projects.</p>
+        </div>
+        <div class="w-8 h-8 bg-indigo-500 rounded-full shadow-lg absolute left-1/2 transform -translate-x-1/2"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
 
 <!-- 🌟 Contact CTA -->
 <section class="py-16 sm:py-20 px-6 md:px-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-center text-white">
