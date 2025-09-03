@@ -1,52 +1,55 @@
 {% extends "base.html" %}
 
 {% block content %}
-<section class="bg-gradient-to-b from-white to-gray-100 dark:from-gray-900 dark:to-gray-800 py-20">
+<section class="bg-gradient-to-b from-gray-900 via-gray-800 to-black py-20 relative overflow-hidden">
   <div class="max-w-7xl mx-auto px-6 lg:px-8">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
       
-      <!-- Left: Profile Image -->
+      <!-- Left: Profile Image with Neon Glow -->
       <div class="flex justify-center md:justify-end">
         <div class="relative group">
           <img src="https://i.postimg.cc/Wpq68Pd5/PRO2.jpg" alt="Abdullah" 
-               class="rounded-2xl shadow-xl w-72 sm:w-80 h-72 sm:h-80 object-cover border-4 border-indigo-500 transition-transform duration-500 group-hover:scale-105">
-          <span class="absolute inset-0 rounded-2xl ring-4 ring-indigo-300 opacity-30 group-hover:opacity-60 transition"></span>
+               class="rounded-2xl w-72 sm:w-80 h-72 sm:h-80 object-cover border-4 border-indigo-500 shadow-[0_0_40px_rgba(99,102,241,0.8)] transition-transform duration-500 group-hover:scale-105">
+          <span class="absolute inset-0 rounded-2xl ring-4 ring-indigo-400 opacity-40 group-hover:opacity-70 transition"></span>
         </div>
       </div>
       
       <!-- Right: About Content -->
       <div>
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 dark:text-white mb-6">About Me</h2>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-6 relative inline-block">
+          About Me
+          <span class="absolute left-0 -bottom-2 w-full h-1 bg-indigo-500 shadow-[0_0_15px_rgba(99,102,241,0.8)]"></span>
+        </h2>
         
-        <p class="text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-          Hi, I’m <span class="font-semibold text-indigo-600 dark:text-indigo-400">Abdullah</span> —
+        <p class="text-base sm:text-lg text-gray-300 leading-relaxed mb-6">
+          Hi, I’m <span class="font-semibold text-indigo-400">Abdullah</span> —
           a passionate <span class="underline decoration-indigo-500">MERN Stack Developer</span> and 
           Computer Science student. I love creating modern, stylish, and responsive web applications.
         </p>
         
-        <p class="text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+        <p class="text-base sm:text-lg text-gray-300 leading-relaxed mb-6">
           My goal is to become an <span class="font-semibold">AI Engineer</span> while mastering 
           full-stack development. I enjoy building projects that solve real-world problems and 
           continuously learning new technologies.
         </p>
 
-        <!-- Skills / Highlights -->
+        <!-- Skills / Highlights with Neon Cards -->
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
-          <div class="bg-white dark:bg-gray-700 shadow-md rounded-xl p-4 flex items-center gap-3 hover:shadow-xl hover:-translate-y-1 transition">
-            <span class="text-indigo-600 dark:text-indigo-400 text-xl">⚡</span>
-            <p class="font-medium text-gray-900 dark:text-gray-100">MERN Stack</p>
+          <div class="bg-gray-800 shadow-[0_0_20px_rgba(99,102,241,0.6)] rounded-xl p-4 flex items-center gap-3 hover:shadow-[0_0_30px_rgba(139,92,246,0.8)] hover:-translate-y-1 transition">
+            <span class="text-indigo-400 text-xl">⚡</span>
+            <p class="font-medium text-gray-100">MERN Stack</p>
           </div>
-          <div class="bg-white dark:bg-gray-700 shadow-md rounded-xl p-4 flex items-center gap-3 hover:shadow-xl hover:-translate-y-1 transition">
-            <span class="text-indigo-600 dark:text-indigo-400 text-xl">🎨</span>
-            <p class="font-medium text-gray-900 dark:text-gray-100">UI/UX Design</p>
+          <div class="bg-gray-800 shadow-[0_0_20px_rgba(99,102,241,0.6)] rounded-xl p-4 flex items-center gap-3 hover:shadow-[0_0_30px_rgba(139,92,246,0.8)] hover:-translate-y-1 transition">
+            <span class="text-indigo-400 text-xl">🎨</span>
+            <p class="font-medium text-gray-100">UI/UX Design</p>
           </div>
-          <div class="bg-white dark:bg-gray-700 shadow-md rounded-xl p-4 flex items-center gap-3 hover:shadow-xl hover:-translate-y-1 transition">
-            <span class="text-indigo-600 dark:text-indigo-400 text-xl">🤖</span>
-            <p class="font-medium text-gray-900 dark:text-gray-100">AI Enthusiast</p>
+          <div class="bg-gray-800 shadow-[0_0_20px_rgba(99,102,241,0.6)] rounded-xl p-4 flex items-center gap-3 hover:shadow-[0_0_30px_rgba(139,92,246,0.8)] hover:-translate-y-1 transition">
+            <span class="text-indigo-400 text-xl">🤖</span>
+            <p class="font-medium text-gray-100">AI Enthusiast</p>
           </div>
-          <div class="bg-white dark:bg-gray-700 shadow-md rounded-xl p-4 flex items-center gap-3 hover:shadow-xl hover:-translate-y-1 transition">
-            <span class="text-indigo-600 dark:text-indigo-400 text-xl">🚀</span>
-            <p class="font-medium text-gray-900 dark:text-gray-100">Problem Solver</p>
+          <div class="bg-gray-800 shadow-[0_0_20px_rgba(99,102,241,0.6)] rounded-xl p-4 flex items-center gap-3 hover:shadow-[0_0_30px_rgba(139,92,246,0.8)] hover:-translate-y-1 transition">
+            <span class="text-indigo-400 text-xl">🚀</span>
+            <p class="font-medium text-gray-100">Problem Solver</p>
           </div>
         </div>
         
