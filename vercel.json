@@ -3,6 +3,7 @@
     { "src": "portfolio/asgi.py", "use": "@vercel/python" }
   ],
   "routes": [
+    { "src": "/static/(.*)", "dest": "/staticfiles/$1" },
     { "src": "/(.*)", "dest": "portfolio/asgi.py" }
   ]
 }
